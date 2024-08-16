@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart E-Kart - Navigation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        header {
+            background-color: #0071ce;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: #005bb5;
+        }
+        
+        main {
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        #navigation {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        #navigation h2 {
+            font-size: 1.8rem;
+            color: #0071ce;
+            margin-bottom: 1rem;
+        }
+        
+        #ai-message {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        #next-item-button {
+            background-color: #0071ce;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        #next-item-button:hover {
+            background-color: #005bb5;
+            transform: scale(1.05);
+        }
+        
+        #item-image {
+            margin-top: 1.5rem;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        
+        @media (min-width: 600px) {
+            #navigation {
+                padding: 2rem;
+            }
+        
+            #next-item-button {
+                font-size: 1.1rem;
+                padding: 1rem 2rem;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WAL E-Kart Navigation</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="navigation.html">Navigate</a>
+            <a href="shopping-list.html">Shopping List</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="navigation">
+            <h2>Navigate Store</h2>
+            <p id="ai-message">Hello! Ready to navigate through the store?</p>
+            <button id="next-item-button">Next Item</button>
+            <img id="item-image" src="" alt="Next Item Image" style="display: none;" width="100%"/>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAL E-Cart - Shopping List</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            background-color: #0071ce;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: #005bb5;
+        }
+        
+        main {
+            flex: 1;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        #shopping-list {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        #shopping-list h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            border-bottom: 2px solid #0071ce;
+            padding-bottom: 0.5rem;
+        }
+        
+        #search-bar {
+            display: flex;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        #search-bar input[type="text"] {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.2rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        #search-bar button {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #0071ce;
+            color: #fff;
+            border: none;
+            padding: 0.6rem 1rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        #search-bar button:hover {
+            background-color: #005bb5;
+            transform: scale(1.05);
+        }
+        
+        #shopping-items {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem 0;
+        }
+        
+        #shopping-items li {
+            padding: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        #shopping-items li:last-child {
+            border-bottom: none;
+        }
+        
+        #add-item-btn {
+            background-color: #28a745;
+            color: #fff;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        
+        #add-item-btn:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+        
+        @media (min-width: 600px) {
+            main {
+                max-width: 800px;
+                padding: 3rem;
+            }
+        
+            #shopping-list {
+                padding: 3rem;
+            }
+        
+            #shopping-list h2 {
+                font-size: 2.5rem;
+            }
+        
+            #search-bar input[type="text"] {
+                font-size: 1.3rem;
+            }
+        
+            #add-item-btn {
+                width: auto;
+            }
+        }        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WAL E-Kart</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="navigation.html">Navigate</a>
+            <a href="shopping-list.html">Shopping List</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="search-bar">
+            <input type="text" placeholder="Search for an item..." />
+            <button>Search</button>
+        </div>
+        <section id="shopping-list">
+            <h2>Your Shopping List</h2>
+            <ul id="shopping-items">
+                <!-- Shopping list items will be dynamically added here -->
+            </ul>
+            <button id="add-item-btn">Add New Item</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

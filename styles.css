@@ -1,0 +1,131 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #0071ce;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #005bb5;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#new-product {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+#camera-feed, #product-info {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#camera-feed h2, #product-info h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #0071ce;
+}
+
+#video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#cart-summary, #recommendations {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+#cart-summary h2, #recommendations h2 {
+    font-size: 1.8rem;
+    color: #0071ce;
+    margin-top: 0;
+}
+
+#cart-items, #recommend-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-items li, #recommend-items li {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#cart-items li:last-child, #recommend-items li:last-child {
+    border-bottom: none;
+}
+
+#total-price {
+    font-weight: bold;
+    color: #0071ce;
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+@media (min-width: 600px) {
+    #new-product {
+        flex-direction: row;
+        gap: 2rem;
+    }
+    #camera-feed, #product-info {
+        flex: 1;
+    }
+}
